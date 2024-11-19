@@ -184,7 +184,7 @@ while running:
 
     screen.blit(pipe_upper_image, (pipe_x2, pipe_y2))
     screen.blit(pipe_lower_image, (pipe_x2, pipe_y2 - pipe_gap))
-
+  
     screen.blit(ground_image, (ground_x, ground_y))
     #rotated_player_surf = pygame.transform.rotate(
         #player_surf, player_tilt_angle)
