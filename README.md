@@ -1,43 +1,83 @@
-- 👋 Hi, I’m @bigjohn694200
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-name: Deploy to GitHub Pages
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "p5": true,
+    "assert": true,
+    "expect": true,
+    "sinon": true,
+    "birdSprite": true,
+    "pipePeakSprite": true,
+    "pipeBodySprite": true,
+    "Bird": true,
+    "Pipe": true,
+  },
+  "extends": [
+    "eslint:recommended",
+    "p5js",
+    "p5js/dom"
+  ],
+  "rules": {
+    "arrow-parens": [
+      "error"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "comma-dangle": [
+      "error",
+      "only-multiline"
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "max-len":[
+      "error",
+      {
+        "code": 100,
+        "ignoreUrls": true
+      },
+    ],
+    "max-params": [
+      "error",
+      6
+    ],
+    "no-cond-assign": [
+      2,
+      "except-parens"
+    ],
+    "eqeqeq": ["error", "smart"],
+    "no-use-before-define": [
+      2,
+      {
+        "functions": false
+      }
+    ],
+    "new-cap": 0,
+    "no-caller": 2,
+    "no-undef": 2,
+    "no-unused-vars": ["error", { "args": "none" }],
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-console": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"![image](https://github.com/user-attachments/assets/9558f6c7-d8a0-40a9-9b97-06694621c37f)
 
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - '**.py'
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Install dependencies
-        run: make init
-
-      - name: Build web version
-        run: make web-build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/web<!---
-bigjohn694200/bigjohn694200 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+    ],
+    "space-before-blocks": [
+      "error",
+      "always"
+    ]
+  },
+}
